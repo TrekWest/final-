@@ -737,7 +737,8 @@ async def reset(interaction: discord.Interaction, pponthepp: str):
         global active_challenge_cooldowns
         global items
         global entire_list
-        items = [lst.copy() for lst in entire_list]
+        items = [[],[],[]]
+        entire_list = [[],[],[]]
         lockedcouncils = []
         failed_challenge_cooldowns = {}
         active_challenge_cooldowns = set()
