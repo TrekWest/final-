@@ -670,7 +670,7 @@ async def additem(interaction: discord.Interaction, item: str):
         await interaction.response.send_message("You are not part of any team!", ephemeral=True)
         return
 
-    if len(entire_list[team]) < 20:
+    if len(entire_list[team]) < 10:
         items[team].append(item)
         entire_list[team].append(item)
         await interaction.response.send_message(f"{item} successfully added", ephemeral=True)
