@@ -17,7 +17,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix='!', intents=intents)
-GUILD_ID = discord.Object(id=1389514810865225879)
+GUILD_ID = discord.Object(id=1389512947721568276)
 pair = {'(':')', '{':'}', '[':']'}
 
 @bot.event
