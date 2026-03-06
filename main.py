@@ -19,12 +19,6 @@ intents.members = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 GUILD_ID = discord.Object(id=1389514810865225879)
 pair = {'(':')', '{':'}', '[':']'}
-@bot.event
-async def on_ready():
-    if not hasattr(bot, "synced"):
-        await bot.tree.sync()
-        bot.synced = True
-        print("Logged in as {}".format(bot.user.name))
 
 @bot.event
 async def on_message(message):
@@ -44,7 +38,7 @@ async def on_message(message):
                 return
             elif pair[stack[length-1]] == i:
                 stack.pop()
-     if len(stack) != 0:
+    if len(stack) != 0:
         await message.reply('Bryan is a dog')
         return
     await bot.process_commands(message)
